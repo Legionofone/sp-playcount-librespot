@@ -564,9 +564,9 @@ public final class Session implements Closeable, SubListener {
             if (loginCredentials == null) {
                 String username;
                 String password;
-                if (System.getenv("USERNAME") != null && System.getenv("PASSWORD") != null) {
-                    username = System.getenv("USERNAME");
-                    password = System.getenv("PASSWORD");
+                if (System.getenv("SPOTIFY_USERNAME") != null && System.getenv("SPOTIFY_PASSWORD") != null) {
+                    username = System.getenv("SPOTIFY_USERNAME");
+                    password = System.getenv("SPOTIFY_PASSWORD");
                 } else {
                     if (args.length < 2) throw new IllegalArgumentException("Missing username and password!");
                     username = args[0];
