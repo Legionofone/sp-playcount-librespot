@@ -56,7 +56,6 @@ public class ArtistInsightsHandler implements HttpHandler {
                     } else {
                         try {
                             MercuryRequests.GenericJsonWrapper resp = this.mercuryClient.sendSync(MercuryRequests.getArtistInsights(artistId)); // Get artist insights with artistId
-                            System.out.println(resp.obj);
 
                             statusCode = 200;
                             res.put("success", true);
